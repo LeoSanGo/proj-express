@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-
-router.get('/', (req, res) => {
+router.get('/list', (req, res) => {
     res.send('fullStack Master');
 });
-router.get('/pagina1', (req, res) => {
+router.get('/new', (req, res) => {
     res.send('fullStack Master');
 });
 
-module.exports = router;
+module.exports = router

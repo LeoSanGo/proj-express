@@ -3,13 +3,14 @@ const app = express();
 const port = 3000;
 
 const indexRouter = require('./routes/index');
+const clientsRouter = require('./routes/clients');
 
-app.get('/', indexRouter);
+/* app.use((req,res, next) => {
+    console.log('passou por aqui');
+    res.send('não chama mais nada');
+}); */
 
-app.get('/clients/list', (req, res) => {
-    res.send('fullStack Master');
-});
-app.get('/clients/new', (req, res) => {
-    res.send('fullStack Master');
-});
+app.use('/', indexRouter);
+app.use('/clients', clientsRouter);
+
 app.listen(port, () => console.log('listening on port ' + port));
