@@ -5,10 +5,10 @@ const port = 3000;
 const indexRouter = require('./routes/index');
 const clientsRouter = require('./routes/clients');
 
-/* app.use((req,res, next) => {
+app.use((req,res, next) => {
     console.log('passou por aqui');
     res.send('não chama mais nada');
-}); */
+}); 
 
 app.use('/', indexRouter);
 app.use('/clients', clientsRouter);
