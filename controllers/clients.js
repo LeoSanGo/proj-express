@@ -1,9 +1,9 @@
 const list = (req, res) => {
-  res.send('fullStack Master');
+  res.send('FullStack Master');
 };
 
 const create = (req, res) => {
-  res.send('fullStack Master');
+  res.send('FullStack Master');
 };
 
 module.exports = {
