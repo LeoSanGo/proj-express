@@ -2,13 +2,24 @@ const indexController = require('./index');
 const expect = require('chai').expect;
 const sinon = require('sinon');
 
-describe('inedex controller', () => {
+describe('index controller', () => {
   it('home', () => {
     let res = {
-      send: function () {},
+      render: function () {},
     };
+    let data = {
+      time: 10,
+      lista:['Tulio', 'Faria', 'Teste'],
+      animais:[
+        {name: 'Teca'},
+        {name: 'Tica'},
+        {name: 'Branca'},
+        {name: 'Tiazinha'},
+        {name: 'Bolinha'}
+      ]
+    }
     let mock = sinon.mock(res);
-    mock.expects('send').once().withArgs('FullStack Master');
+    mock.expects('render').once().withArgs('home', data);
     indexController.home({}, res);
   });
 
