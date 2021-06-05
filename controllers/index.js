@@ -22,7 +22,7 @@ const calc = (req, res) => {
     const soma = parseFloat(num1) + parseFloat(num2);
     res.render('calc', { soma });
   } else {
-    res.send('calculadora');
+    res.render('erro');
   }
 };
 
